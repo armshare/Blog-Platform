@@ -1,0 +1,45 @@
+{
+    "blogs": [
+      {
+        "id": 1,
+        "title": "How to Learn JavaScript",
+        "category": "Programming",
+        "content": "Lorem ipsum...",
+        "author": "John Doe",
+        "views": 1200
+      },
+      {
+        "id": 3,
+        "title": "Tips for Healthy Living",
+        "category": "Health",
+        "content": "Lorem ipsum...",
+        "author": "Jane Doe",
+        "views": 800
+      },
+      {
+        "id": 4,
+        "title": "Tips for Healthy Living",
+        "category": "Health",
+        "content": "Lorem ipsum...",
+        "author": "Jane Doe",
+        "views": 860
+      },
+      {
+        "id": 5,
+        "title": "Tips for Healthy Living",
+        "category": "Health",
+        "content": "Lorem ipsum...",
+        "author": "Jane Doe",
+        "views": 600
+      },
+      {
+        "id": 6,
+        "title": "Tips for Hsssssssssssssssealthy Living",
+        "category": "Health",
+        "content": "Lorem ipsum...",
+        "author": "Jane Doe",
+        "views": 1800
+      }
+    ]
+  }
+  

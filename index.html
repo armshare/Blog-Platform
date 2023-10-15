@@ -1,305 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog United</title>
     <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-        <nav class="flex-no-wrap relative flex w-full 
-        items-center justify-between bg-[#2a2a2a] 
-        py-2 shadow-md 
-         dark:shadow-black/10 lg:flex-wrap 
-         lg:justify-start">
-            <div class="flex w-full flex-wrap items-center px-3">
-                <div class="ml-2">
-                    <a class="text-xl text-neutral-200 " href="./">United Blog</a>
-                </div>
-                <!-- search input -->
-                <div class="ml-4 flex w-[50%] md:w-[20%] justify-between mr-auto">
-                    <input type="search" class="relative m-0 block w-[1px] min-w-0 
-                        flex-auto rounded border border-solid border-neutral-100 
-                        bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base 
-                        font-normal l" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" />
+      <nav
+        class="flex-no-wrap relative flex w-full items-center justify-between bg-[#2a2a2a] py-2 shadow-md dark:shadow-black/10 lg:flex-wrap lg:justify-start"
+      >
+        <div class="flex w-full flex-wrap items-center px-3">
+          <div class="ml-2">
+            <a class="text-xl text-neutral-200" href="./">United Blog</a>
+          </div>
+          <!-- search input -->
+          <div class="ml-4 flex w-[50%] md:w-[20%] justify-between mr-auto">
+            <input
+              type="text"
+              class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-100 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal l active:text-white focus:text-white active:text-white after:text-red-500"
+              placeholder="Search"
+            />
 
-                    <!--Search icon-->
-                    <span class="input-group-text flex items-center whitespace-nowrap 
-                        rounded px-3 py-1.5 text-center text-base 
-                        font-normal text-neutral-200 
-                        dark:text-neutral-200" id="basic-addon2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                            <path fill-rule="evenodd"
-                                d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </span>
-                </div>
+            <!--Search icon-->
+            <span
+              class="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-200 dark:text-neutral-200"
+              id="basic-addon2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="h-5 w-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
 
-                <!-- Hamburger button for mobile view -->
-                <button class="block border-0 bg-transparent px-2 text-neutral-500  ml-auto
-                    hover:no-underline hover:shadow-none focus:no-underline 
-                    focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden" type="button"
-                    data-te-collapse-init data-te-target="#navbarSupportedContent3"
-                    aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- Hamburger icon -->
-                    <span class="[&>svg]:w-7">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
-                            <path fill-rule="evenodd"
-                                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </span>
-                </button>
-                <!-- Collapsible navbar container -->
-                <div class="!visible mt-2 hidden basis-[100%] lg:mt-0 lg:!flex lg:basis-auto "
-                    id="navbarSupportedContent3" data-te-collapse-item>
-                    <!-- Left links -->
-                    <ul class="list-style-none 
-                    flex flex-col pl-0 
-                    lg:mt-1 lg:flex-row" data-te-navbar-nav-ref>
-                      
-                        <!-- Blogs link -->
-                        <li class="mb-4 mr-5 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
-                            <a class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-200 hover:ease-in-out focus:text-neutral-200 
-                            " href="./create-blog.html" data-te-nav-link-ref>
-                            <div class="flex flex-row">  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                            </svg> Create new blog
-                              
-                            </div>
-                            </a>
-                        </li>
-                        <li class="mb-2 mr-1 pl-2 lg:mb-0 lg:pl-0 lg:pr-1">
-                            <a href="./login.html" class="rounded-full 
-                            border-solid border bg-[#2a2a2a]
-                            px-6 p-2 hover:bg-red-900  
-                             text-white"
-                             >Log In</a>
-                        </li>
-                        <li class="mt-4 mb-4 md:mt-0 pl-2 lg:mb-0 lg:pl-0 lg:pr-1">
-                            <a class="rounded-full 
-                            border-solid border bg-[#c70101]
-                            px-6 p p-2 hover:bg-red-900 
-                             text-white">Sign
-                                Up</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          <!-- Hamburger button for mobile view -->
+          <button
+            class="block border-0 bg-transparent px-2 text-neutral-500 ml-auto hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            type="button"
+            data-te-collapse-init
+            data-te-target="#navbarSupportedContent3"
+            aria-controls="navbarSupportedContent3"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <!-- Hamburger icon -->
+            <span class="[&>svg]:w-7">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </button>
+          <!-- Collapsible navbar container -->
+          <div
+            class="!visible mt-2 hidden basis-[100%] lg:mt-0 lg:!flex lg:basis-auto"
+            id="navbarSupportedContent3"
+            data-te-collapse-item
+          >
+            <!-- Left links -->
+            <ul
+              class="list-style-none flex flex-col pl-0 lg:mt-1 lg:flex-row"
+              data-te-navbar-nav-ref
+            >
+              <!-- Blogs link -->
+              <li
+                class="mb-4 mr-5 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+                data-te-nav-item-ref
+              >
+                <a
+                  class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-200 hover:ease-in-out focus:text-neutral-200"
+                  href="./create-blog.html"
+                  data-te-nav-link-ref
+                >
+                  <div class="flex flex-row">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                    Create new blog
+                  </div>
+                </a>
+              </li>
+              <li class="mb-2 mr-1 pl-2 lg:mb-0 lg:pl-0 lg:pr-1">
+                <a
+                  href="./login.html"
+                  class="rounded-full border-solid border bg-[#2a2a2a] px-6 p-2 hover:bg-red-900 text-white"
+                  >Log In</a
+                >
+              </li>
+              <li class="mt-4 mb-4 md:mt-0 pl-2 lg:mb-0 lg:pl-0 lg:pr-1">
+                <a
+                  class="rounded-full border-solid border bg-[#c70101] px-6 p p-2 hover:bg-red-900 text-white"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <section>
+        <div
+          class="container p-2 my-1 mx-auto md:px-4 lg:px-4 h-1/2"
+          id="new-blog"
+        ></div>
+      </section>
 
-        <section id="new-blog">
-            <div class="container p-2 my-1 mx-auto md:px-4 lg:px-4 h-1/2">
+      <section id="last-blog" class="mb-24 text-center">
+        
+        <h2 id="head-last-blog" class="pb-1 text-center text-3xl font-bold">Latest articles</h2>
 
-                <div class="relative  rounded-lg bg-cover bg-no-repeat shadow-lg bg-[#C70101] ">
-                    <img src="https://images.unsplash.com/photo-1623607915241-a3151d59a9c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80"
-                        class="mb-6 w-full rounded-lg shadow-lg align-middle" alt="image" />
-                    <a href="#!">
-                        <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
-                            <div class="flex h-full items-end justify-start ">
-                                <div class="m-6 text-gray-900 w-full bg-slate-200 bg-opacity-50 p-6 ">
-                                    <h5 class="mb-3 text-lg font-bold"><a href="./detail-blog.html">I miss win.</a></h5>
-                                    <p>
-                                        <span> Published by </span>
-                                        <span class="font-medium"> <a
-                                                href="/profile-view.html?user=Devils">Mr.Devils</a></span>
-                                        <u>07.10.2023</u>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class=" top-0 right-0 bottom-0 left-0 h-[90%] w-full bg-fixed  hover:bg-[hsla(0,0%,99%,0.15)]">
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+        <div
+          class="p-4 md:p-8 grid gap-4 lg:grid-cols-3 xl:gap-x-12"
+          id="last-blog-content"
+        ></div>
 
-        <section id="last-blog" class="mb-24 text-center ">
-            <h2 class="pb-1 text-center text-3xl font-bold">
-                Latest articles
-            </h2>
-
-            <div class="p-4 md:p-8 grid gap-4 lg:grid-cols-3 xl:gap-x-12">
-                <div class="mb-6 lg:mb-4">
-                    <div class="relative block rounded-lg bg-[#C70101]">
-                        <div class="flex">
-                            <div class="relative mx-4 -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
-                                data-te-ripple-init data-te-ripple-color="light">
-                                <img src="https://images.unsplash.com/photo-1649771543751-051019fb0093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2847&q=80"
-                                    class="w-full" />
-                                <a href="#!">
-                                    <div
-                                        class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="tags relative  mx-4 mt-3   flex flex-row">
-                            <button type="button" class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs 
-                            "> News</button>
-                            <button type="button" class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs 
-                            "> Match</button>
-                        </div>
-                        <div class="p-6">
-                            <h5 class="mb-3 text-lg font-bold text-neutral-300">THIS MUST BE THE TURNING POINT</h5>
-                            <p class="mb-4 text-neutral-500 dark:text-neutral-300">
-                                <small>Published <u>13.01.2023</u> by
-                                    <a href="/profile-view.html?user=Devils">Mr.Devils</a></small>
-                            </p>
-                            <p class="mb-4 pb-2 text-justify text-neutral-300">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas est totam sunt
-                                deleniti consectetur accusamus sapiente labore veniam debitis rem, ipsam, animi,
-                                reiciendis nostrum distinctio aspernatur dolore nam nisi!
-                            </p>
-                            <a href="#!" class="inline-block rounded-full px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out
-                                border-solid border
-                                hover:bg-red-400
-                                ">Read
-                                more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-6 lg:mb-4">
-                    <div class="relative block rounded-lg bg-[#C70101]">
-                        <div class="flex">
-                            <div class="relative mx-4 -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
-                                data-te-ripple-init data-te-ripple-color="light">
-                                <img src="https://images.unsplash.com/photo-1610201477480-2605bbc65c11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80"
-                                    class="w-full" />
-                                <a href="#!">
-                                    <div
-                                        class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="tags relative  mx-4 mt-3   flex flex-row">
-                            <button type="button" class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs 
-                            "> News</button>
-                            <button type="button" class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs 
-                            "> Match</button>
-                        </div>
-                        <div class="p-6">
-                            <h5 class="mb-3 text-lg font-bold text-neutral-300">My paradise</h5>
-                            <p class="mb-4 text-neutral-500 dark:text-neutral-300">
-                                <small>Published <u>13.01.2023</u> by
-                                    <a href="/profile-view.html?user=Devils">Mr.Devils</a></small>
-                            </p>
-                            <p class="mb-4 pb-2 text-justify text-neutral-300">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas est totam sunt
-                                deleniti consectetur accusamus sapiente labore veniam debitis rem, ipsam, animi,
-                                reiciendis nostrum distinctio aspernatur dolore nam nisi!
-                            </p>
-                            <a href="#!" class="inline-block rounded-full px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out
-                                border-solid border
-                                hover:bg-red-400
-                                ">Read
-                                more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-6 lg:mb-4">
-                    <div class="relative block rounded-lg bg-[#C70101]">
-                        <div class="flex">
-                            <div class="relative mx-4 -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
-                                data-te-ripple-init data-te-ripple-color="light">
-                                <img src="https://images.unsplash.com/photo-1662096909714-e2f206d0a636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80"
-                                    class="w-full" />
-                                <a href="#!">
-                                    <div
-                                        class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="tags relative  mx-4 mt-3   flex flex-row">
-                            <button type="button" class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs 
-                            "> News</button>
-                            <button type="button" class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs 
-                            "> Match</button>
-                        </div>
-                        <div class="p-6">
-                            <h5 class="mb-3 text-lg font-bold text-neutral-300">Thai MUSC</h5>
-                            <p class="mb-4 text-neutral-500 dark:text-neutral-300">
-                                <small>Published <u>13.01.2023</u> by
-                                    <a href="/profile-view.html?user=Devils">Mr.Devils</a></small>
-                            </p>
-                            <p class="mb-4 pb-2 text-justify text-neutral-300">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas est totam sunt
-                                deleniti consectetur accusamus sapiente labore veniam debitis rem, ipsam, animi,
-                                reiciendis nostrum distinctio aspernatur dolore nam nisi!
-                            </p>
-                            <a href="#!" class="inline-block rounded-full px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out
-                                border-solid border
-                                hover:bg-red-400
-                                ">Read
-                                more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-6 lg:mb-4">
-                    <div class="relative block rounded-lg bg-[#C70101]">
-                        <div class="flex">
-                            <div class="relative mx-4 -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
-                                data-te-ripple-init data-te-ripple-color="light">
-                                <img src="https://images.unsplash.com/photo-1642763907630-17bad0853f15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80"
-                                    class="w-full" />
-                                <a href="#!">
-                                    <div
-                                        class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="tags relative  mx-4 mt-3   flex flex-row">
-                            <button type="button" class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs 
-                            "> News</button>
-                            <button type="button" class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs 
-                            "> Match</button>
-                        </div>
-                        <div class="p-6">
-                            <h5 class="mb-3 text-lg font-bold text-neutral-300">IT JUST HAD TO BE AN ACADEMY GRADUATE!
-                            </h5>
-                            <p class="mb-4 text-neutral-500 dark:text-neutral-300">
-                                <small>Published <u>13.01.2023</u> by
-                                    <a href="/profile-view.html?user=Devils">Mr.Devils</a></small>
-                            </p>
-                            <p class="mb-4 pb-2 text-justify text-neutral-300">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas est totam sunt
-                                deleniti consectetur accusamus sapiente labore veniam debitis rem, ipsam, animi,
-                                reiciendis nostrum distinctio aspernatur dolore nam nisi!
-                            </p>
-                            <a href="#!" class="inline-block rounded-full px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out
-                                border-solid border
-                                hover:bg-red-400
-                                ">Read
-                                more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <h4 id="stats"></h4>
+      </section>
 
     </main>
     <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script>
+      let dataAll = [];
+      let dataStat = [];
+      const sectionNewBlog = document.querySelector("#new-blog");
+      const sectionBlog = document.querySelector("#last-blog-content");
 
-</body>
+      const GetDataBlogs = async () => {
 
+        await fetch("./blog-stat.json").then(response => response.json()).then((data) => {dataStat = data.statistics});
+        await fetch("./blog-data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.blogs.length > 0) {
+              dataAll = data.blogs;
+              const mostReview = data.blogs.sort((a, b) => {
+                return b.views - a.views;
+              });
+
+              sectionNewBlog.innerHTML = `<div
+              class="relative rounded-lg bg-cover bg-no-repeat shadow-lg bg-[#C70101]"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1623607915241-a3151d59a9c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80"
+                class="mb-6 w-full rounded-lg shadow-lg align-middle"
+                alt="image"
+              />
+              <a href="#!">
+                <div
+                  class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"
+                >
+                  <div class="flex h-full items-end justify-start">
+                    <div
+                      class="m-6 text-gray-900 w-full bg-slate-200 bg-opacity-50 p-6"
+                    >
+                      <h5 class="mb-3 text-lg font-bold">
+                        <a href="./detail-blog.html">${mostReview[0].title} (${mostReview[0].views} views) อ่านเพิ่มเติม</a>
+                      </h5>
+                      <p>
+                        <span> Published by </span>
+                        <span class="font-medium">
+                          <a href="/profile-view.html?blogId=${mostReview[0].id}"
+                            > ${mostReview[0].author}</a
+                          ></span>
+                        <u>07.10.2023</u>
+                      </p>
+                      <div class="mt-3">
+                      <button
+                    type="button"
+                    class="px0-.5 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs"
+                  >
+                      ${mostReview[0].category}
+                  </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="top-0 right-0 bottom-0 left-0 h-[90%] w-full bg-fixed hover:bg-[hsla(0,0%,99%,0.15)]"
+                ></div>
+              </a>
+            </div>`;
+
+              const anotherContent = mostReview.slice(1);
+              console.log("anotherContent :", anotherContent);
+
+              sectionBlog.innerHTML = "";
+              sectionBlog.innerHTML = GenHTMLBlogsCard(anotherContent);
+            }
+
+            document.querySelector("#stats").innerHTML = `total blogs : ${dataStat.totalBlogs} / total views : ${dataStat.totalViews} `;
+            return data.blogs;
+          });
+      };
+
+      GetDataBlogs();
+
+      console.log("dataAll : ", dataAll);
+console.log("dataStat" , dataStat);
+
+      const searchInput = document.querySelector("input[type=text]");
+
+      const search = (e) => {
+        let valInput = e.target.value;
+        if (valInput.length > 0) {
+          sectionNewBlog.style.display = "none";
+          sectionBlog.innerHTML = `${e.target.value}`;
+          let searchMatch = dataAll.filter(
+            (i) =>
+              i.title.toLowerCase().indexOf(valInput.toLowerCase()) > -1 ||
+              i.content.toLowerCase().indexOf(valInput.toLowerCase()) > -1 ||
+              i.category.toLowerCase().indexOf(valInput.toLowerCase()) > -1
+          );
+
+          if (searchMatch.length > 0) {
+            sectionBlog.innerHTML = GenHTMLBlogsCard(searchMatch);
+          }
+        } else {
+          sectionNewBlog.style.display = "block";
+        }
+      };
+      searchInput.addEventListener("keyup", search);
+
+      function GenHTMLBlogsCard(content) {
+        let card = "";
+        content.forEach((element) => {
+          card += `  <div class="mb-6 lg:mb-4">
+              <div class="relative block rounded-lg bg-[#C70101]">
+                <div class="flex">
+                  <div
+                    class="relative mx-4 -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1649771543751-051019fb0093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2847&q=80"
+                      class="w-full"
+                    />
+                    <a href="#!">
+                      <div
+                        class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"
+                      ></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="tags relative mx-4 mt-3 flex flex-row">
+
+                  <button
+                    type="button"
+                    class="px-0.5 mx-1 rounded-full p-0.5 uppercase leading-normal text-rose-200 border-neutral-300 border text-xs"
+                    onClick="searchByTags('${element.category}')"
+                  >
+                  ${element.category}
+                  </button>
+                </div>
+                <div class="p-6">
+                  <h5 class="mb-3 text-lg font-bold text-neutral-300">
+                    ${element.title}
+                  </h5>
+                  <p class="mb-4 text-neutral-500 dark:text-neutral-300">
+                    <small
+                      >Published <u>13.01.2023</u> by
+                      <a href="/profile-view.html?user=Devils"
+                        > ${element.author}</a
+                      ></small
+                    >
+                  </p>
+                  <p class="mb-4 pb-2 text-justify text-neutral-300">
+                      ${element.content}
+                  </p>
+                  <a
+                    href="#!"
+                    class="inline-block rounded-full px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out border-solid border hover:bg-red-400"
+                    >อ่านเพิ่มเติม</a
+                  >
+                </div>
+              </div>
+            </div>`;
+        });
+        return card;
+      }
+
+      function searchByTags( tag){
+        // e.preventDefault();
+        console.log("tags ", tag)
+        let searchMatch = dataAll.filter(
+            (i) =>
+            i.category.toLowerCase().indexOf(tag.toLowerCase()) > -1
+            );
+            sectionNewBlog.style.display = "none";
+            sectionBlog.innerHTML = GenHTMLBlogsCard(searchMatch);
+            document.querySelector("#head-last-blog").innerHTML = "Filter by tags: "+ tag;
+
+      }
+    </script>
+  </body>
 </html>
